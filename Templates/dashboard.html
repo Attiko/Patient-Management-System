@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Lifecare | Home</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Mooli Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+<meta name="author" content="GetBootstrap, design by: puffintheme.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="/Static/assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/Static/assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/Static/assets/vendor/animate-css/vivify.min.css">
+
+<link rel="stylesheet" href="/Static/assets/vendor/chartist/css/chartist.min.css">
+<link rel="stylesheet" href="/Static/assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="/Static/assets/vendor/c3/c3.min.css"/>
+<link rel="stylesheet" href="/Static/assets/vendor/toastr/toastr.min.css">
+<link rel="stylesheet" href="/Static/assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="/Static/assets/css/mooli.min.css">
+
+</head>
+<body>
+    
+<div id="body" class="theme-green">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="mt-3"><img src="Static/images/icon.svg" width="40" height="40" alt="Mooli"></div>
+            <p>Please wait...</p>        
+        </div>
+    </div>
+
+    <!-- Theme Setting -->
+    <div class="sr-only themesetting">
+        <a href="javascript:void(0);" class="theme_btn"><i class="fa fa-gear fa-spin"></i></a>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <ul class="choose-skin list-unstyled mb-0">
+                    <li data-theme="green" class="active"><div class="green"></div></li>
+                    <li data-theme="orange"><div class="orange"></div></li>
+                    <li data-theme="blush"><div class="blush"></div></li>
+                    <li data-theme="cyan"><div class="cyan"></div></li>
+                    <li data-theme="timber"><div class="timber"></div></li>
+                    <li data-theme="blue"><div class="blue"></div></li>
+                    <li data-theme="amethyst"><div class="amethyst"></div></li>
+                </ul>
+            </li>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+                <span>Light Sidebar</span>
+                <label class="switch sidebar_light">
+                    <input type="checkbox" checked="">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+                <span>Gradient</span>
+                <label class="switch gradient_mode">
+                    <input type="checkbox" checked="">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+                <span>Dark Mode</span>
+                <label class="switch dark_mode">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+
+    <div id="wrapper">
+
+        <!-- Page top navbar -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-left">
+                    <div class="navbar-btn">
+                        <a href="/nurse-dashboard"><img src="Static/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"></a>
+                        <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-align-left"></i></button>
+                    </div>
+                    <form id="navbar-search" class="sr-only navbar-form search-form">
+                        <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                        <input value="" class="form-control" placeholder="Search here..." type="text">                    
+                    </form>
+                </div>
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="hidden-xs"><a href="javascript:void(0);" id="btnFullscreen" class="icon-menu"><i class="fa fa-arrows-alt"></i></a></li>
+                            <li><a href="/logout" class="icon-menu"><i class="fa fa-power-off"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Main left sidebar menu -->
+        <div id="left-sidebar" class="sidebar light_active">
+            <a href="javascript:void(0);" class="menu_toggle"><i class="fa fa-angle-left"></i></a>
+            <div class="navbar-brand">
+                <a href="/nurse-dashboard"><img src="/Static/assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"><span>Lifecare-Hospital</span></a>
+                <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <div class="user_div">
+                        <img src="/Static/assets/images/user.png" class="user-photo" alt="User Profile Picture">
+                    </div>
+                    <div class="dropdown">
+
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong><div class="msg">{{ msg }}</div></strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
+                            <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
+                            <li class="divider"></li>
+                            li><a href="/logout"><i class="fa fa-power-off"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>  
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu animation-li-delay">
+                        <li class="header">Hospital</li>
+                        <li class="active"><a href="/nurse-dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                        <li>
+                            <a href="#Patients" class="has-arrow"><i class="fa fa-user-circle-o"></i><span>Patients</span></a>
+                            <ul>
+                                <li><a href="/Patients">All Patient</a></li>
+                                <li><a href="/newPatient">Add Patient</a></li>
+                                <li class=""><a href="/newCheckup">Routine Checks</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#Appointment" class="has-arrow"><i class="fa fa-calendar"></i> <span>Appointment</span></a>
+                            <ul>
+                                 <li class=""><a href="/newAppointment">Schedule Appointment</a></li>
+                            </ul>
+                        </li>
+                         <li class="">
+                            <a href="#Administrator" class="has-arrow"><i class="fa fa-calendar"></i> <span>Administrator</span></a>
+                            <ul>
+                                 <li class=""><a href="/registerStaff">Register Staff</a></li>
+                                <li class=""><a href="/deleteStaff">Delete Staff</a></li>
+                                <li class=""><a href="/deletePatient">Delete Patient</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>     
+            </div>
+        </div>   
+        <!-- Main body part  -->
+        <div id="main-content">
+            <div class="container-fluid">
+                <!-- Page header section  -->
+                <div class="block-header">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <h1>Hi, Welcomeback!</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-lg page_menu">
+                            <a class="navbar-brand" href="#">M.</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fa fa-bars text-muted"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active"><a class="nav-link" href="/nurse-dashboard">Analytics</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-12">
+                        <div class="card theme-bg gradient">
+                            <div class="body">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="body">
+                                                <div>General Practitioner</div>
+                                                <div class="mt-3 h1">1,035</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="body">
+                                                <div>Specialists</div>
+                                                <div class="mt-3 h1">735</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="body">
+                                                <div>Nurses</div>
+                                                <div class="mt-3 h1">2,652</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="body">
+                                                <div>Patients</div>
+                                                <div class="mt-3 h1">1,671</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-12">
+                        <div class="section_title">
+                            <div class="mr-3">
+                                <h3>Overview</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix row-deck">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>Upcoming Appointments</h2>
+                            </div>
+                            <div class="body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead>
+                                            <tr> 
+                                                <th>Patient Name</th>
+                                                <th>Physician Name</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          {% for row in rows %}
+                                            <tr>
+                                                {% for data in row %}
+                                                   <td>{{ data }}</td>
+                                                {% endfor %}
+                                            </tr>
+                                          {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Javascript -->
+<script src="/Static/assets/bundles/libscripts.bundle.js"></script>
+<script src="/Static/assets/bundles/vendorscripts.bundle.js"></script>
+
+<!-- Vedor js file and create bundle with grunt  --> 
+<script src="/Static/assets/vendor/toastr/toastr.js"></script>
+
+<!-- Project core js file minify with grunt --> 
+<script src="/Static/assets/bundles/mainscripts.bundle.js"></script>
+<!-- <script src="../../js/index.js"></script> -->
+</body>
+</html>

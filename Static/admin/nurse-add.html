@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Lifecare | Add Nurse</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Mooli Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+<meta name="author" content="GetBootstrap, design by: puffintheme.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/animate-css/vivify.min.css">
+
+<link rel="stylesheet" href="assets/vendor/dropify/css/dropify.min.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/mooli.min.css">
+
+</head>
+<body>
+    
+<div id="body" class="theme-green">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="mt-3"><img src="assets/images/icon.svg" width="40" height="40" alt="Mooli"></div>
+            <p>Please wait...</p>        
+        </div>
+    </div>
+
+    <!-- Theme Setting -->
+    <div class="sr-only themesetting">
+        <a href="javascript:void(0);" class="theme_btn"><i class="fa fa-gear fa-spin"></i></a>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <ul class="choose-skin list-unstyled mb-0">
+                    <li data-theme="green" class="active"><div class="green"></div></li>
+                    <li data-theme="orange"><div class="orange"></div></li>
+                    <li data-theme="blush"><div class="blush"></div></li>
+                    <li data-theme="cyan"><div class="cyan"></div></li>
+                    <li data-theme="timber"><div class="timber"></div></li>
+                    <li data-theme="blue"><div class="blue"></div></li>
+                    <li data-theme="amethyst"><div class="amethyst"></div></li>
+                </ul>
+            </li>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+                <span>Light Sidebar</span>
+                <label class="switch sidebar_light">
+                    <input type="checkbox" checked="">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+                <span>Gradient</span>
+                <label class="switch gradient_mode">
+                    <input type="checkbox" checked="">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+                <span>Dark Mode</span>
+                <label class="switch dark_mode">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li class="list-group-item d-flex align-items-center justify-content-between">
+                <span>RTL version</span>
+                <label class="switch rtl_mode">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+        </ul>
+        <hr>
+        <div>
+            <a href="https://themeforest.net/user/puffintheme/portfolio" class="btn btn-dark btn-block" target="_blank">Buy this item</a>
+            <a href="https://themeforest.net/user/puffintheme/portfolio" target="_blank" class="btn btn-primary theme-bg gradient btn-block">View Portfolio</a>
+        </div>
+    </div>
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+
+    <div id="wrapper">
+
+        <!-- Page top navbar -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-left">
+                    <div class="navbar-btn">
+                        <a href="index.html"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"></a>
+                        <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-align-left"></i></button>
+                    </div>
+                    
+                </div>
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- <li><a href="javascript:void(0);" class="right_note icon-menu" title="Right Menu">Notes</a></li> -->
+                            <li class="dropdown hidden-xs">
+                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">Create</a>
+                                <div class="dropdown-menu pb-0 mt-0">
+                                    <a class="dropdown-item pt-2 pb-2" href="javascript:void(0);">Doctor</a>
+                                    <a class="dropdown-item pt-2 pb-2" href="javascript:void(0);">Nurse</a>
+                                    <a class="dropdown-item pt-2 pb-2" href="javascript:void(0);">Patient</a>
+                                </div>
+                            </li>
+                            <!-- <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="fa fa-comments-o"></i></a></li> -->
+                            <li class="hidden-xs"><a href="javascript:void(0);" id="btnFullscreen" class="icon-menu"><i class="fa fa-arrows-alt"></i></a></li>
+                            <li><a href="page-login.html" class="icon-menu"><i class="fa fa-power-off"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+        </nav>
+        <!-- Main left sidebar menu -->
+        <div id="left-sidebar" class="sidebar light_active">
+            <a href="#" class="menu_toggle"><i class="fa fa-angle-left"></i></a>
+            <div class="navbar-brand">
+                <a href="index.html"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"><span>Mooli-Hospital</span></a>
+                <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <div class="user_div">
+                        <img src="assets/images/user.png" class="user-photo" alt="User Profile Picture">
+                    </div>
+                    <div class="dropdown">
+                        <span>Welcome</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Administrator</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
+                            <li><a href="dr-profile.html"><i class="fa fa-user"></i>My Profile</a></li>
+                            <li><a href="app-inbox.html"><i class="fa fa-envelope"></i>Messages</a></li>
+                            <li><a href="setting.html"><i class="fa fa-gear"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="page-login.html"><i class="fa fa-power-off"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>  
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu animation-li-delay">
+                        <li class="header">Hospital</li>
+                        <li><a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                        <li class="">
+                            <a href="#Doctors" class="has-arrow"><i class="fa fa-user-md"></i><span>Doctors</span></a>
+                            <ul>
+                                <li><a href="dr-all.html">All Doctors</a></li>
+                                <li class=""><a href="dr-add.html">Add Doctors</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="#Nurses" class="has-arrow"><i class="fa fa-user-md"></i><span>Nurses</span></a>
+                            <ul>
+                                <li><a href="nurse-all.html">All Nurses</a></li>
+                                <li class="active"><a href="nurse-add.html">Add Nurses</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#Patients" class="has-arrow"><i class="fa fa-user-circle-o"></i><span>Patients</span></a>
+                            <ul>
+                                <li><a href="patients-all.html">All Patient</a></li>
+                                <li><a href="patients-add.html">Add Patient</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li><a href="app-calendar.html"><i class="fa fa-calendar"></i> <span>Appointment</span></a></li>
+                       
+                    </ul>
+                </nav>     
+            </div>
+        </div>
+        <!-- Main body part  -->
+        <div id="main-content">
+            <div class="container-fluid">
+                <!-- Page header section  -->
+                <div class="block-header">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <h1>Add Nurse</h1>
+                            <!-- <span>JustDo Add Doctors,</span> -->
+                        </div>
+                        <div class="col-lg-8 col-md-12 col-sm-12 text-lg-right">
+                            <div class="d-flex align-items-center justify-content-lg-end mt-4 mt-lg-0 flex-wrap vivify pullUp delay-550">
+                                <div class="mb-3 mb-xl-0">
+                                    <a href="#" class="btn btn-dark">Submit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="body">
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div class="form-group c_form_group">
+                                            <label>First Name <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group c_form_group">
+                                            <label>Last Name <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-sm-4">
+                                        <div class="form-group c_form_group">
+                                            <label>Date of Birth <span class="text-danger">*</span></label>
+                                            <input type="text" data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group c_form_group">
+                                            <label>Gender <span class="text-danger">*</span></label>
+                                            <select class="form-control show-tick">
+                                                <option value="">- Gender -</option>
+                                                <option value="10">Male</option>
+                                                <option value="20">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group c_form_group">
+                                            <label>Speciality <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group c_form_group">
+                                            <label>Phone <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="number" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group c_form_group">
+                                            <label>Email <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="email" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input type="file" class="dropify">
+                                    </div>
+                                    
+                                    </div>
+                                    <div class="col-sm-12 mt-3">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <!-- <button type="submit" class="btn btn-outline-secondary">Cancel</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>Nurse's Account Information</h3>
+                            </div>
+                            <div class="body">
+                                <div class="row clearfix">
+                                    <div class="col-sm-12">
+                                        <div class="form-group c_form_group">
+                                            <label>User Name <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group c_form_group">
+                                            <label>Password <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="password" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group c_form_group">
+                                            <label>Confirm Password <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="password" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <!-- <button type="submit" class="btn btn-outline-secondary">Cancel</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<!-- Vedor js file and create bundle with grunt  --> 
+<script src="assets/vendor/dropify/js/dropify.min.js"></script>
+<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script><!-- bootstrap datepicker Plugin Js --> 
+
+<!-- Project core js file minify with grunt --> 
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="../js/pages/forms/dropify.js"></script>
+</body>
+</html>
